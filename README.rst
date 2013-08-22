@@ -8,7 +8,6 @@ hg-commit-sanity: Mercurial Commit Sanity
 .. image:: https://coveralls.io/repos/paylogic/hg-commit-sanity/badge.png?branch=master
    :target: https://coveralls.io/r/paylogic/hg-commit-sanity
 
-
 ``hg-commit-sanity`` is a Mercurial extension that allows to easily create precommit hooks to do sanity checks on commits.
 
 Kudos to `Matthew Schinckel <http://schinckel.net/2013/04/07/hg-commit---prevent-stupidity/>`_

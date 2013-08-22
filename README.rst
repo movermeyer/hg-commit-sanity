@@ -22,7 +22,7 @@ An example of your .hgrc:
 .. code-block:: cfg
 
   [extensions]
-  hg-commit-sanity =
+  hg_commit_sanity =
 
   [hg_commit_sanity]
   .py =

@@ -41,7 +41,7 @@ setup(
         'Operating System :: POSIX',
         'Operating System :: Microsoft :: Windows',
         'Operating System :: MacOS :: MacOS X',
-        'Topic :: Software Development :: Mercurial',
+        'Topic :: Software Development :: Version Control',
         'Topic :: Utilities',
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 3'

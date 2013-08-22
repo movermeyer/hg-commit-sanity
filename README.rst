@@ -1,11 +1,11 @@
 hg-commit-sanity: Mercurial Commit Sanity
 =========================================
 
-.. |Build Status| image:: https://api.travis-ci.org/paylogic/hg-commit-sanity.png
+.. image:: https://api.travis-ci.org/paylogic/hg-commit-sanity.png
    :target: https://travis-ci.org/paylogic/hg-commit-sanity
-.. |Pypi| image:: https://pypip.in/v/hg-commit-sanity/badge.png
+.. image:: https://pypip.in/v/hg-commit-sanity/badge.png
    :target: https://crate.io/packages/hg-commit-sanity/
-.. |Coverrals| image:: https://coveralls.io/repos/paylogic/hg-commit-sanity/badge.png?branch=master
+.. image:: https://coveralls.io/repos/paylogic/hg-commit-sanity/badge.png?branch=master
    :target: https://coveralls.io/r/paylogic/hg-commit-sanity
 
 

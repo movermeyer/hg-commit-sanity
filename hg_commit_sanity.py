@@ -57,10 +57,11 @@ def hg_commit_sanity_hook(ui, repo, node=None, **kwargs):
     for filename in changeset:
         ext = os.path.splitext(filename)[-1]
         checkers = checkers.get(ext)
-        data = changeset.filectx(filename).data()
-        our_errors = list(test_data(checkers, data))
-        if our_errors:
-            errors[filename] = our_errors
+        if checkers:
+            data = changeset.filectx(filename).data()
+            our_errors = list(test_data(checkers, data))
+            if our_errors:
+                errors[filename] = our_errors
 
     lines = []
 

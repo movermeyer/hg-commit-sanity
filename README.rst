@@ -24,7 +24,7 @@ An example of your .hgrc:
   [extensions]
   hg-commit-sanity =
 
-  [hg-commit-sanity]
+  [hg_commit_sanity]
   .py =
     ^[^#]*import pdb; pdb.set_trace\(\),
     ^print',

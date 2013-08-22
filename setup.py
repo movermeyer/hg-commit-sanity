@@ -29,10 +29,10 @@ setup(
     name='hg-commit-sanity',
     description='Mercurial extension to do sanity checks on commits.',
     long_description=long_description,
-    author='Anatoly Bubenkov',
     license='MIT license',
-    author_email='bubenkoff@gmail.com',
-    url='https://github.com/bubenkoff/hg-commit-sanity',
+    author='Anatoly Bubenkov on behalf of Paylogic International',
+    author_email='developer@paylogic.com',
+    url='https://github.com/paylogic/hg-commit-sanity',
     version='0.0.1',
     classifiers=[
         'Development Status :: 1 - Alpha',

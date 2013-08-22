@@ -36,19 +36,6 @@ def hg_ui_with_checkers(hg_ui, checkers):
 
 
 @pytest.fixture
-def tag():
-    """Get test tag."""
-    return 'some_tag'
-
-
-@pytest.fixture
-def hg_ui_with_tag(hg_ui, tag):
-    """Get test mercurial ui with tag config set up."""
-    hg_ui.setconfig('poke_jenkins', 'tag', tag)
-    return hg_ui
-
-
-@pytest.fixture
 def repo_dir():
     """Get test repo dir."""
     return tempfile.mkdtemp()
@@ -67,15 +54,15 @@ def hg_repo(hg_ui, repo_dir):
     return hg.repository(hg_ui, repo_dir)
 
 
-def test_poke_jenkins(hg_ui, hg_repo):
+def test_hg_commit_sanity(hg_ui, hg_repo):
     """Test poke_jenkins hook setup."""
     hg_commit_sanity.reposetup(hg_ui, hg_repo)
     assert hg_ui.config('hooks', 'pretxncommit.hg-commit-sanity') == hg_commit_sanity.hg_commit_sanity_hook
 
 
-def test_poke_jenkins_hook(
-        hg_ui_with_checkers, hg_ui_with_tag, hg_repo,
-        py_file_path, tag):
+def test_hg_commit_sanity_hook(
+        hg_ui_with_checkers, hg_repo,
+        py_file_path):
     """Test poke_jenkins hook with jenkins base url and repo url and jenkins jobs being set up."""
 
     with contextlib.closing(open(py_file_path, 'a')) as f:

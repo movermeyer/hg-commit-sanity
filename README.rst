@@ -26,10 +26,10 @@ An example of your .hgrc:
 
   [hg_commit_sanity]
   .py =
-    ^[^#]*import pdb; pdb.set_trace\(\),
-    ^print',
+    ^[^#]*import pdb; pdb.set_trace\(\)
+    ^print'
   .js =
-    ^[^(//)]*console\.[a-zA-Z]+\(.*\)'
+    ^[^(//)]*console\.[a-zA-Z]+\(.*\)
 
 This will Abort the commit in case it will find import pdb; pdb.set_trace() in *.py files and console. in *.js files
 

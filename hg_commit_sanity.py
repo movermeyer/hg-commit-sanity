@@ -30,25 +30,24 @@ class colour(object):
     FAIL = '\033[91m'
     END = '\033[0m'
 
-ERROR_HEADER = "*** Unable to commit. There were errors in %s files. ***"
+ERROR_HEADER = "*** Unable to commit. There were errors in {0} files. ***"
 ERROR_MESSAGE = """  File "{0}/{1}", line {2},
 {3}{4}{5}"""
 
 
 def test_data(checkers, data):
     for checker in checkers:
-        search = checker.finditer(data)
-        if search:
-            for match in search:
-                line_number = data[:match.end()].count('\n')
-                yield line_number + 1, data.split('\n')[line_number]
+        for match in checker.finditer(data):
+            line_number = data[:match.end()].count('\n')
+            print 'yield', line_number
+            yield line_number + 1, data.split('\n')[line_number]
 
 
 def hg_commit_sanity_hook(ui, repo, node=None, **kwargs):
     checkers = {}
     for key, value in ui.configitems('hg_commit_sanity'):
         if key.startswith('.'):
-            checkers[key] = [re.compile(item) for item in value]
+            checkers[key] = [re.compile(item) for item in value.splitlines()]
 
     changeset = repo[node]
 
@@ -66,7 +65,7 @@ def hg_commit_sanity_hook(ui, repo, node=None, **kwargs):
     lines = []
 
     if errors:
-        lines.append(colour.HEADER + ERROR_HEADER % len(errors) + colour.END)
+        lines.append(colour.HEADER + ERROR_HEADER.format(len(errors)) + colour.END)
         for filename, error_list in errors.items():
             for line_number, message in error_list:
                 lines.append(ERROR_MESSAGE.format(

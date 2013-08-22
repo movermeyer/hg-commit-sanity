@@ -19,10 +19,9 @@ def hg_ui():
 def checkers():
     """Get checkers."""
     return {
-        '.py': [
-            '^[^#]*import pdb; pdb.set_trace\(\)',
-            '^print'],
-        '.js': ['^[^(//)]*console\.[a-zA-Z]+\(.*\)']
+        '.py': """^[^#]*import pdb; pdb.set_trace\(\)
+^print']""",
+        '.js': '^[^(//)]*console\.[a-zA-Z]+\(.*\)'
     }
 
 

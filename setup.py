@@ -35,7 +35,7 @@ setup(
     url='https://github.com/paylogic/hg-commit-sanity',
     version='0.0.1',
     classifiers=[
-        'Development Status :: 1 - Alpha',
+        'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Operating System :: POSIX',

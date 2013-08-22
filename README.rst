@@ -12,14 +12,12 @@ hg-commit-sanity: Mercurial Commit Sanity
 
 Kudos to `Matthew Schinckel <http://schinckel.net/2013/04/07/hg-commit---prevent-stupidity>`_
 
-
 Installation
 ------------
 
 .. sourcecode ::
 
     pip install hg-commit-sanity
-
 
 Configuration
 -------------
@@ -39,12 +37,10 @@ An example of your .hgrc:
 
 This will Abort the commit in case it will find import pdb; pdb.set_trace() in *.py files and console. in *.js files
 
-
 Contact
 -------
 
 If you have questions, bug reports, suggestions, etc. please create an issue on the `GitHub project page <http://github.com/paylogic/hg-commit-sanity>`_.
-
 
 License
 -------

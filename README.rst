@@ -3,7 +3,7 @@ hg-commit-sanity: Mercurial Commit Sanity
 
 .. image:: https://api.travis-ci.org/paylogic/hg-commit-sanity.png
    :target: https://travis-ci.org/paylogic/hg-commit-sanity
-.. image:: https://pypip.in/v/hg-commit-sanity/badge.png
+.. image:: https://img.shields.io/pypi/v/hg-commit-sanity.svg
    :target: https://crate.io/packages/hg-commit-sanity/
 .. image:: https://coveralls.io/repos/paylogic/hg-commit-sanity/badge.png?branch=master
    :target: https://coveralls.io/r/paylogic/hg-commit-sanity
